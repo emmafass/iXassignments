@@ -1,0 +1,90 @@
+#header {
+	line-height: 24px;
+	font-family: Arial Narrow;
+	font-size: 48px;
+	font-weight: 50;
+	text-align: center;
+	padding-bottom: 0px;
+	padding-top: 0px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 0px;
+	color: #72D3E4;
+}
+#moto {
+	position: relative;
+	clear: both;
+	font-family: Arial Narrow;
+	font-weight: 200;
+	font-size: 26px;
+	text-align: center;
+	padding-top: 0px;
+	color: #c0c8c9;
+}
+table, td {
+	
+}
+table, tr {
+	border: 1px #ffffff solid;
+	
+}
+table {
+	align: center;
+	margin: auto;
+	margin-bottom: 24px;
+}
+hr {
+	border: none;
+	margin-top: -1px;
+	height: 1px;
+	background-color: #c0c8c9;
+	width: 75%;
+	margin-bottom: 24px;
+	margin-top: -1px;
+}
+/*#button1 {
+	position: relative;
+	clear: both;
+	border-radius: 15%;
+	border: 2px solid black;
+	height: 100px;
+	width: 100px;
+	font-family: Arial;
+	font-size: 16px;
+	text-align: center;
+
+}
+#button2 {
+	position: relative;
+	clear: both;
+	border-radius: 15%;
+	border: 2px solid black;
+	height: 100px;
+	width: 100px;
+	font-family: Arial;
+	font-size: 16px;
+	text-align: center;
+	/*font-weight: bold;
+
+}*/
+#line {
+
+}
+#links {
+	position: relative;
+	clear: both;
+	font-family: Verdana, Arial;
+	font-size: 16px;
+	text-align: center;
+	margin-bottom: 24px;
+	color: #c0c8c9;
+
+}
+#closing {
+	position: relative;
+	clear: both;
+	font-family: Verdana, Arial;
+	font-size: 10px;
+	text-align: center;
+
+}
