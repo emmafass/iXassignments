@@ -1,0 +1,108 @@
+body {
+	background-color: black;
+}
+
+.header {
+	display: inline-block;
+	width: 100%;
+	margin: 0px auto;
+	/*border: 4px solid white;*/
+}
+
+.title{
+	display: inline-block;
+	width: 100px;
+	float: left;
+	padding-left: 30px;
+	padding-right: 80px;
+	padding-top: 5px;
+	font-size: 24px;
+}
+
+.logo{
+	display: inline-block;
+	width: 0.4px;
+	float: left;
+}
+
+.lil_img {
+	width:50px;
+	padding:;
+}
+
+.nav_bar{
+	display: inline-block;
+	float: right;
+	/*width: 40%;*/
+	/*border: 4px solid orange; */
+}
+
+ul{
+	display: inline-block;
+	float:right;
+	/*width: 80%;*/
+	/*border: 4px solid red; */
+}
+
+.nav_item {
+	display: inline-block;
+	float:right;
+	/*width: 25%;*/
+	font-size: 10px;
+	/*border: 4px solid blue; */
+	font-size: 18px; 
+	padding-right: 35px;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+	font-family: Circular, Avenir, Arial;
+	/*font-size: 24px;*/
+}
+
+.nav_1 {
+	/*font-size: 18px;*/
+}
+
+.basics {
+	color: white;
+	font-family: Circular, Avenir, Arial;
+}
+
+.description {
+	color:white;
+}
+
+.contact {
+	color:white;
+	text-decoration: none;
+}
+
+.contact ul li{
+	display: block;
+}
+
+.social {
+	color:white;
+	text-decoration: none;
+}
+
+.social ul li{
+	display: block;
+}
+
+
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
