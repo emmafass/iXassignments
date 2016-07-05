@@ -80,10 +80,6 @@ function longestPalindrome(sentence) {
 }
 
 function areAnagrams (sentence1, sentence2) {
-    // if (sentence1 and sentence2 are anagrams)
-    //     return 'yes'
-    // else
-    //     return 'no'
     var string1 = sentence1.toLowerCase().split('').sort().join('').trim();
     var string2 = sentence2.toLowerCase().split('').sort().join('').trim();
     if (string1===string2){
