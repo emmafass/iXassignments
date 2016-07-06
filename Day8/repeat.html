@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body ng-app="listApp">
+    <div ng-controller="ListCtrl">
+      <input ng-model="todoName">
+      <input ng-model="dueDate">
+      <button ng-click="addTodo()">Add todo</button>
+      
+      <ol>
+        
+        <li ng-repeat="todo in todos track by $index">
+          {{todo.name}} is due {{ todo.dueDate }}
+        </li>
+      </ol>
+      
+    </div>
+    
+    <script src="angular.js"></script>
+    <script src="repeat.js"></script>
+  </body>
+</html>

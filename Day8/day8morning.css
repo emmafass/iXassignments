@@ -1,0 +1,33 @@
+.lightbox-bg {
+	/*display: none;*/
+
+}
+
+.lightbox-contents {
+	/* this should center the image on the screen on top of the background*/
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%); 
+
+}
+
+.lightbox {
+	/* this should not be on the screen to start*/
+	background: rgba(0,0,0,.5);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.isVisible {
+	/* this does exactly what it sounds like it does */
+	/*display: block;*/
+}
+
+.changeColor {
+	/*new section to change the color of the text to red*/
+	color: red;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CalcApp</title>
+</head>
+<body ng-app = "CalculatorApp">
+	<div ng-controller = "CalculatorCtrl">
+		<input ng-model = "x">
+		<input ng-model = "y">
+		<input ng-model = "z">
+		<button ng-click="doAdd()">Add numbers</button>
+		<button ng-click="doSubtract()">Subtract numbers</button>
+		<button ng-click="doMultiply()">Multiply numbers</button>
+		<button ng-click="doDivide()">Divide numbers</button>
+		<p>The result is: {{result1}}</p>
+		<p>The result is: {{result2}}</p>
+		<p>The result is: {{result3}}</p>
+		<p>The result is: {{result4}}</p>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>	
+	<script src="CalcApp.js"></script>
+</body>
+</html>
