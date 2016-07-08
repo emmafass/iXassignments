@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Search NYTimes</title>
+</head>
+<body ng-app = "nyt">
+	<div ng-controller = "MainCtrl">
+		<input ng-model="searchTerm">
+		<button ng-click="search(searchTerm)">Search</button>
+		
+
+		<div ng-repeat="a in articles">
+				<h3><a href="{{a.url}}">{{a.headline.main}}</a></h3>
+		</div>
+	</div>
+
+	<script src="angular.js"></script>	
+	<script src="nytimes.js"></script>
+</body>
+</html>
