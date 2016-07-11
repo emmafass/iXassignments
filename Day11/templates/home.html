@@ -1,0 +1,11 @@
+<h3>Movie Time</h3>
+
+<label>Search: <input ng-model="searchText"></label>
+<button ng-click="searchMovie()">Search</button>
+
+<ol>
+	<li ng-repeat="movie in movieArray">
+		<a href="#/movie/{{movie.imdbID}}">{{movie.Title}}</a>
+		
+	</li>
+</ol>

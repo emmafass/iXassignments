@@ -1,0 +1,13 @@
+<div class="row">
+	<h3>{{movie.Title}}</h3>
+
+	<p>{{movie.Plot}}</p>
+	<p>{{movie.Rated}}</p>
+	<p>{{movie.Actors}}</p>
+
+	<ol>
+		<li ng-repeat="g in gify">
+			<img ng-src="{{g.images.downsized.url}}"></img>
+		</li>
+	</ol>
+</div>
