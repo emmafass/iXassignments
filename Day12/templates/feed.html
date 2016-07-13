@@ -1,0 +1,67 @@
+ <!-- <select ng-model="myBru" ng-options="bru.last_name for bru in brus"></select> -->
+ <!-- this shows Gabe to the human and actually selects 1234 as the option -->
+ <!-- <option value="1234">Gabe</option> -->
+ <div class="row">
+ 	<div class="banner">
+ 		<div class="col-sm-offset-3 col-sm-6">
+ 			<div class="heading">
+
+ 				<p class="title"> iXchommies </p>
+ 				<h4> Give Props to your Brus </h4>
+ 				<div class="myProps">
+					<button class="btn"><a href="#/me/emma">Show Me Some Love</a></button>
+ 				</div>
+
+ 			</div>
+
+			<!-- <form > -->
+	 			<div class = "inputs clearfix" ng-class="{'isDisabled':isSending}">
+					<!-- Select a Bru -->
+					<div class="selectB">
+		 				<p >Select a Bru</p>
+		 				<select ng-model="selectedBru" ng-options="bru.id as bru.first_name for bru in brus"></select>
+					</div>
+					<!-- Write Something -->
+					<div class="this_shit">
+		 				<p>Write something nice</p>
+						<!-- Actual Prop input -->
+		 				<p class="send_props">
+			 				<input ng-model="newPropsValue"> 
+			 				<button ng-click="sendProps(selectedBru, newPropsValue)">Send Props</button>
+		 				</p>
+	 				</div>
+
+	 			</div>
+	 		<!-- </form> -->
+ 		</div>
+ 	</div>
+ </div>
+ 
+<div class="row">
+ 	<div class="col-lg-12">
+ 		<!-- Alert Message -->
+		<div class="alert alert-danger" role="alert" ng-show="error_message">
+			{{error_message}}
+		</div>
+	</div>
+</div>
+
+</div>	
+
+
+<div class="container-fluid">
+ 	<div class="row">
+ 		<div class="col-sm-offset-3 col-sm-6">
+			<div class="props">
+
+			 	<div ng-repeat=" prop in props "> 
+			 		<p> @ {{prop.receiver.first_name}} : 
+			 			{{prop.text}} </p> 
+			 	</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+

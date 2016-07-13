@@ -1,0 +1,109 @@
+* {
+	box-sizing: border-box;
+	font-family: 'Arimo', sans-serif;
+}
+
+.background{
+	background-color: #f8fafc;
+	background-size: cover;
+	
+}
+
+.banner{
+	background-image: url("https://drscdn.500px.org/photo/124225201/m%3D2048/89e6faa3c89c2065ad5edbbb39e5261f");
+	background-size: cover;
+	width: 100vw;
+	color: #f8fafc;
+	height: 275px;
+}
+
+.heading {
+	text-align: center;
+}
+
+.title {
+	font-size: 45px;
+}
+
+.inputs {
+	font-size: 18px;
+	margin-top: 40px;
+}
+
+.send_props {
+	color: #c7505c;
+	float: left;
+	font-size: 18px;
+	text-shadow: 2px 2px #000000;
+	text-align: center;
+}
+
+.error_mess {
+	color: #f8fafc;
+	float: left;
+	font-size: 18px;
+	text-shadow: 2px 2px #000000;
+}
+
+/*.style_this_alert {
+	margin-top: 50px;
+}*/
+
+.props {
+	color: #284c63;
+	font-size: 18px;
+	text-align: left;
+}
+
+.bg {
+	/*background-color: #63cdc3;*/
+	background-size: cover;
+	background-image: url("https://drscdn.500px.org/photo/124225201/m%3D2048/89e6faa3c89c2065ad5edbbb39e5261f");
+	height: 100vw;
+}
+
+.btn {
+	background-color: white;
+}
+
+.btn2 {
+	float: left;	
+	color: #f8fafc;
+	font-size: 18px;
+}
+
+
+.my_props {
+	text-align: center;
+	font-size: 24px;
+	color: #f8fafc;
+}
+
+.my_name {
+	float: left;
+	font-size: 36px;
+	margin-top: 40px;
+}
+
+.list {
+	list-style-type: none;
+	text-align: left;
+}
+
+.selectB {
+	float: left;
+	margin-right: 30px;
+	margin-left: 100px;
+}
+
+.this_shit {
+	float: left;
+	margin-left: 30px;
+}
+
+.isDisabled {
+	opacity: 0.3;
+	pointer-events: none;
+}
+
+
