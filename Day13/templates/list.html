@@ -1,0 +1,26 @@
+<div class="row">
+	<div class="col-md-12">
+		<div class="banner">
+			<h1>Tension</h1>
+		</div>
+	</div>
+</div>
+
+
+<h3> Login or Sign Up </h3>
+<a href="#/signup">Click to Sign Up</a>
+<a href="#/login">Click to Login</a>
+
+<h3> Sign Out </h3>
+<!-- <button ng-click="signOut()" >Sign Out</button>  -->
+<a href="#/login" ng-click="authObj.$signOut()">Sign out</a>
+
+
+<h4>Create a new channel</h4>
+<input ng-model="newChannel"></input><button ng-click="createChannel()">Create</button>
+
+<h5>Here are the channels you can peruse </h5>
+
+<div ng-repeat="(key, value) in channels">
+	<a href="#/channel/{{key}}">{{value.name}}</a> :  {{c.description}}
+</div> 

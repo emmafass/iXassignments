@@ -1,0 +1,16 @@
+<div class="row">
+	<div class="col-md-12">
+		<div class="banner">
+			<h1>Tension</h1>
+		</div>
+	</div>
+</div>
+
+<p>Welcome to the {{curr_channel}} channel </p>
+
+<!-- <p>Enter your username: <input ng-model="userName"> </p> -->
+<p>Enter some text: <input ng-model="newMessage"> <button ng-click="sendMessage()">Send</button></p>
+
+<div ng-repeat="m in messages">
+	{{users[m.sender].name}} :  {{m.text}}
+</div>
