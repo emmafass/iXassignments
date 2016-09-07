@@ -9,6 +9,7 @@
 
 <h3> Login or Sign Up </h3>
 <a href="#/signup">Click to Sign Up</a>
+<div></div>
 <a href="#/login">Click to Login</a>
 
 <h3> Sign Out </h3>
@@ -24,3 +25,45 @@
 <div ng-repeat="(key, value) in channels">
 	<a href="#/channel/{{key}}">{{value.name}}</a> :  {{c.description}}
 </div> 
+
+
+
+<h4>Send a friend an Email!!</h4>
+<!-- <div ng-repeat="u in users">
+	{{users.name}} 
+</div> -->
+
+<input ng-model="recipient">
+<button ng-click="sendMail()">Send an Email</button>
+
+<div ng-init="myVar = emma">
+
+This is the input<input ng-model="myVar">
+
+{{myVar}}
+
+
+</div>
+
+<div>
+{{role}}
+</div>
+
+<div>
+<button ng-click="clicked()" ng-model="button1">button1</button>
+</div>
+
+<div>
+<button ng-model="button2">button2</button>
+</div>
+
+<!-- <div>	
+	<form>
+		tenant<input type="radio" ng-model="firstname">
+	</form>
+</div>
+ -->
+
+
+
+

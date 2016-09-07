@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>ToDo</title>
+	<title>Grocery</title>
 </head>
 <body ng-app = "theGroceryList">
 	<div ng-controller = "groceryCtrl">
@@ -21,12 +21,23 @@
 		<!-- Log the items in the list -->
 		<h4>Your current grocery list: </h4>
 
-<label>Search: <input ng-model="searchText"></label>
+		<label>Search: <input ng-model="searchText"></label>
+		<button ng-click="empty()"> Empty Cart </button>
 		<ol> 
-			<li ng-repeat="items in groceries | filter:searchText">
-				{{items.name}} :  {{items.amt}} 
-				<button ng-click="add(items)"> + </button>
-				<button ng-click="subtract(items)"> - </button>
+			<li ng-repeat="items in groceries | filter:searchText"> 
+			<div ng-hide="item.isEditing">
+				<span ng-dblclick="item.isEditing = true">{{items.name}} :  {{items.amt}} </span>
+				<span><button ng-click="add(items)"> + </button></span>
+				<span><button ng-click="subtract(items)"> - </button></span>
+				<span><button class="btn" ng-click="item.isEditing = true">edit</button></span>
+				<span><button ng-click="delete($index)"> Delete </button></span>
+			</div>
+
+				<div ng-show="item.isEditing">
+					<input ng-model="items.name">
+					<span><button class="btn" ng-click="item.isEditing = false">done</button></span>
+				</div>
+
 			</li>
 		</ol>
 

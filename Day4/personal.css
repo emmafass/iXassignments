@@ -1,10 +1,15 @@
 .Side_bar{
 	background-color: #f8b195;
-	/*border: 4px solid blue;*/
 	position: relative;
 	height: 120vh;
 	font-family: 'Raleway', sans-serif;
+}
 
+.Side_bar_interest{
+	height: 192vh;
+	background-color: #f8b195;
+	position: relative;
+	font-family: 'Raleway', sans-serif;
 }
 
 .prof_pic {
@@ -13,6 +18,10 @@
 	top: 8%;
 	left: 10%;
 	border-radius: 50%;
+}
+
+.prof_pic_interest{
+	top:5%;
 }
 
 .name{
@@ -24,6 +33,11 @@
 	left: 15%;
 }
 
+.name_interest{
+	position: absolute;
+	top: 33%;
+}
+
 .contact{
 	color:white;
 	font-size: 16px;
@@ -31,6 +45,11 @@
 	position: absolute;
 	top: 65%;
 	left: 15%;
+}
+
+.contact_interest{
+	position: absolute;
+	top: 39%;
 }
 
 .LIlogo{
@@ -64,7 +83,7 @@
 	/*background-color: pink;*/
 }
 
-#Work{
+#Work, #Involvement, #Education, #Interests{
 	display: block;
 	float: left;
 	margin-left: 30px;
@@ -74,62 +93,13 @@
 	font-family: 'Raleway', sans-serif;
 	font-weight: bold;
 	text-decoration: none;
+	border-bottom: 2px solid white;
 }
 
-#Work:hover{
+#Work:hover, #Involvement:hover, #Education:hover, #Interests:hover{
 	border-bottom: 2px solid #f8b195;
 	color: #575757;
-}
-
-#Involvement{
-	display: block;
-	float: left;
-	margin-left: 30px;
-	margin-right: 30px;
-	margin-top: 75px;
-	margin-bottom: 45px;
-	font-family: 'Raleway', sans-serif;
-	font-weight: bold;
-	text-decoration: none;
-}
-
-#Involvement:hover{
-	border-bottom: 2px solid #f8b195;
-	color: #575757;
-}
-
-#Education{
-	display: block;
-	float: left;
-	margin-left: 30px;
-	margin-right: 30px;
-	margin-top: 75px;
-	margin-bottom: 45px;
-	font-family: 'Raleway', sans-serif;
-	font-weight: bold;
-	text-decoration: none;
-}
-
-#Education:hover{
-	border-bottom: 2px solid #f8b195;
-	color: #575757;
-}
-
-#Interests{
-	display: block;
-	float: left;
-	margin-left: 30px;
-	margin-right: 30px;
-	margin-top: 75px;
-	margin-bottom: 45px;
-	font-family: 'Raleway', sans-serif;
-	font-weight: bold;
-	text-decoration: none;
-}
-
-#Interests:hover{
-	border-bottom: 2px solid #f8b195;
-	color: #575757;
+	transition: all 0.3s;
 }
 
 .text_section {
@@ -204,73 +174,61 @@
 	height: 0;
 }
 
-.UVA{
-	position: relative;
-	top: -80px;
+.uva {
+	background-image: url("http://www.faculty.virginia.edu/spsuva/Assets/UVA.png");
 }
 
-.pics {
-	margin-bottom: 0px;
+.hra {
+	background-image: url("http://www.tournevents.com/_assets/HRAGolf15/image/Blue-Navigators-Compass-Rose.jpg");
 }
 
-.uva_text{
-	position: absolute;
-	left: 25%;
-	transform: translate(-110px,125px);
-	font-size: 35px;
-	font-family:'Raleway', sans-serif;
-	color:transparent;
-	z-index: 1;
-	position:relative;
-}
-
-.uva_pic{
+.img-box {
+	width: 300px;
+	height: 300px;
 	float: left;
-	width:50%;
-	z-index: 0.1;
-	/*margin-bottom: 0;*/
-}
-
-.uva_pic:hover {
-	opacity: 0.2;
-	z-index: 0.1;
-}
-
-.uva_pic:hover .uva_text {
-	visibility: visible;
-	color:black;
-	z-index: 1;
+	/*border: 1px solid orange;*/
+	background-size: cover;
+	background-position: center center;
 	position: relative;
 }
 
-/*.HRA{
-	top: -80px;
-}*/
 
-.hra_text{
+.img-box::before {
+	content: "";
+	display: block;
 	position: absolute;
-	left: 25%;
-	transform: translate(215px,125px);
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0,0,0,.7);
+	opacity: 0;
+	transition: all .3s;
+}
+
+.img-box:hover::before {
+	opacity: 1;
+}
+
+.hover-overlay {
+	opacity: 0;
+	color: white;
 	font-size: 35px;
-	color: black;
 	font-family:'Raleway', sans-serif;
-	color:transparent;
+	transition: all .3s;  
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-70%);
 }
 
-.hra_pic{
-	float: left;
-	width:50%;
-	/*margin-bottom: 0;*/
+.img-box:hover .hover-overlay {
+	opacity: 1;
+	transform: translate(-50%,-50%);
 }
 
-.hra_pic:hover {
-	opacity: 0.2;
-}
-
-.hra_pic:hover .hra_text {
-	visibility: visible;
-	color:black;
-	z-index: 1;
+.some_text{
+	font-size:24px;
 }
 
 .course_title{
@@ -278,7 +236,7 @@
 	font-size: 25px;
 	margin-top: 10px;
 	position: relative;
-	top:-40px;
+	top:0px;
 }
 
 .course_description{
@@ -286,16 +244,38 @@
 	font-size: 15px;
 	/*padding-bottom: 80px;*/
 	position: relative;
-	top:-40px;
+	top:0px;
 }
 
 .picture_section{
 	/*height: 500px;*/
+	width:100%;
+	margin: 0px auto;
 }
 
-.ernie_photo{
-	width:50%;
-	/*padding:100px;*/
+.interest_img{
+	background-size:cover;
+
+}
+
+.travel_img{
+	height: 325px;
+}
+
+.interest_photo{
+	float: left;
+	width:100%;
+}
+
+.interest_text {
+	float: left;
+	font-family: 'Raleway', sans-serif;
+	font-size: 32px;
+	padding-top: 50px;
+}
+
+.student_photo{
+	/*padding: 0px 10px;*/
 }
 
 .clearfix { display: inline-block; }
@@ -310,11 +290,11 @@
 	}
 	.search_bar {
 		float:right;
-		
+
 	}
 	.LIlogo{
-	width: 15%;
-}
+		width: 15%;
+	}
 }
 
 @media (max-width: 992px) {
@@ -339,6 +319,13 @@
 		top: 20%;
 		left: 0;
 	}
+	.img-box {
+		width: 200px;
+		height: 200px;
+	}
+	.some_text{
+		font-size:16px;
+	}
 	.LIlogo{
 		width: 13%;
 	}
@@ -354,6 +341,53 @@
 	#Interests:hover{
 		border-bottom: 2px solid #c06c84;
 	}
+	.job_title{
+		font-size: 16px;
+	}
+
+	.job_date{
+		font-size: 14px;
+	}
+
+	.job_description{
+		font-size: 12px;
+	}
+}
+
+@media (max-width: 610px) {
+	#Work, #Involvement, #Education, #Interests {
+		display: block;
+		float: left;
+		margin-left: 5px;
+		margin-right: 5px;
+		margin-top: 40px;
+		padding-right: 0;
+	}
+	.job_title{
+		font-size: 14px;
+	}
+	.img-box {
+		width: 200px;
+		height: 200px;
+	}
+
+	.some_text{
+		font-size:14px;
+	}
+
+	#Work{
+		margin-left:0px;
+	}
+
+	.job_date{
+		float:left;
+		margin-left: 5px;
+		font-size: 12px;
+	}
+
+	.job_description{
+		font-size: 10px;
+	}
 }
 
 @media (max-width: 550px) {
@@ -363,11 +397,12 @@
 	.prof_pic {
 		visibility: hidden;
 	}
-	.name{
-		
+	.img-box {
+		width: 200px;
+		height: 200px;
 	}
-	.contact{
-
+	.some_text{
+		font-size:14px;
 	}
 	.nav_bar{
 		color: gray;
@@ -438,11 +473,12 @@
 	.prof_pic {
 		visibility: hidden;
 	}
-	.name{
-		
+	.img-box {
+		width: 100px;
+		height: 100px;
 	}
-	.contact{
-
+	.some_text{
+		font-size:10px;
 	}
 	.nav_bar{
 		color: gray;
@@ -458,38 +494,14 @@
 		display: block;
 	}
 
-	#Work{
+	#Work, #Involvement, #Education, #Interests {
 		display: block;
 		float: left;
-		margin-left: 5px;
-		margin-right: 5px;
-		margin-top: 40px;
-	}
-
-	#Involvement{
-		display: block;
-		float: left;
-		margin-left: 5px;
-		margin-right: 5px;
-		margin-top: 40px;
-	}
-
-	#Education{
-		display: block;
-		float: left;
-		margin-left: 5px;
-		margin-right: 5px;
-		margin-top: 40px;
-	}
-
-	#Interests{
-		display: block;
-		float: left;
-		margin-left: 5px;
-		margin-right: 5px;
+		margin-left: 3px;
+		margin-right: 3px;
 		margin-top: 40px;
 	}
 	.LIlogo{
-	width: 10%;
+		width: 10%;
 	}
 }
